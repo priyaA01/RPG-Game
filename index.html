@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <title>Priya Ammaiyappan</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Bootstrap CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <!-- Link to external CSS :  reset , style-->
+      <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+   </head>
+   <body >
+      <header class="text-center">
+         <h1>Star Wars RPG!</h1>
+      </header>
+      <div class="container mainContainer" >
+         <div class="row">
+            <div class="col-md-12 col-sm-12">
+               <div class="row">
+                  
+                  <div class="col-md-12 col-sm-12 " id="divCharacter">
+                     <span class="words">Your Character</span>
+                     <a href="#" class ="character" id="c1"><img src="assets/images/character1.jfif" alt="character1" >
+                      <span class="topWords">Obi-Wan Kenobi</span><span class="bottomWords">120</span></a>
+                     <a href="#" class ="character" id="c2"><img src="assets/images/character2.jfif" alt="character2" >
+                     <span class="topWords">Luke Skywalker</span><span class="bottomWords">100</span></a>
+                     <a href="#" class ="character" id="c3"><img src="assets/images/character3.jfif" alt="character3" >
+                     <span class="topWords">Darth Sidious</span><span class="bottomWords">150</span></a>
+                     <a href="#" class ="character" id="c4"><img src="assets/images/character4.jfif" alt="character4" >
+                     <span class="topWords">Darth Maul</span><span class="bottomWords">180</span></a>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 " >
+                     <span class="words">Enemies Available to Attack</span>
+                     <div  id="enemies"></div>
+                  </div>
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12 col-sm-12 ">
+                     
+                     <span class="words">Fight Section</span><br>
+                     <button id="attack" class="btn btn-danger btn-lg" type="button" disabled >Attack</button>
+                                    
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                     <span class="words">Defender</span>
+                     <div  id="defender"></div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                     <span class="words" id="attackMsg">Attack message</span>
+                     
+                  </div>
+               </div>
+
+
+            </div>           
+           <!--  <div class="col-md-4 col-sm-12">
+                for image
+           </div> -->
+         </div>
+         
+      </div>
+      <footer class="text-center" >
+         &copy; Copyright 2018 Priya Ammaiyappan
+      </footer>
+     <!--  <audio id="backgroundSound" controls loop>
+        <source src="assets/images/background.mp3" type="audio/mp3">
+     </audio>
+     <audio id="correctSound" controls>
+        <source src="assets/images/correct.mp3" type="audio/mp3">
+     </audio>
+     <audio id="wrongSound" controls>
+        <source src="assets/images/wrong.mp3" type="audio/mp3">
+     </audio> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="assets/javascript/game.js"></script>
+   </body>
+</html>
