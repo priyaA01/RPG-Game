@@ -2,12 +2,23 @@
      min-height: 100%;
      position:relative;
 }
+body{
+	height:auto;
+	color:white;
+	background-image: url("../images/background.jpg");
+	background-repeat: no-repeat;
+	/* background-position: center top; */
+}
 header{
 	font-size: 40px;
 	margin-bottom: 50px;
 	background-color: black;
 	color:white;
 	padding:15px;
+}
+.mainContainer
+{
+	margin-bottom: 100px;
 }
 
  footer {
@@ -25,7 +36,12 @@ header{
 	border:1px solid black;
 } */
 
+.restart{
+	display:none;
+}
+
 a img{
+	background-color: white;
 	border:3px solid green;
 	width:150px;
 	height:150px;
@@ -41,7 +57,7 @@ a img{
 	bottom:135px;
 	left:20px;
 	right:20px;
-	color:black;
+	color:white;
 	font-size:14px;
 }
 .bottomWords{
@@ -50,7 +66,7 @@ a img{
 	top:0;
 	left:20px;
 	right:20px;
-	color:black;
+	color:white;
 	font-size:14px;
 }
 
