@@ -50,7 +50,6 @@ a img {
 .character {
 	position: relative;
 	width: 150px;
-	cursor: pointer;
 }
 
 .topWords {

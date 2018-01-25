@@ -1,6 +1,12 @@
 /*global variables*/
 var attackPower = 0;
 var attackMsg = "";
+var banana = new Audio("assets/images/banana.mp3");
+var attack = new Audio("assets/images/attack.mp3");
+var what = new Audio("assets/images/what.mp3");
+var defenderOut = new Audio("assets/images/defenderOut.mp3");
+var out = new Audio("assets/images/out.mp3");
+
 
 /*character object containing character name , healthpoints, base attack power and counter attack power.
 object method setPower returns player's attackpowers*/
@@ -35,6 +41,7 @@ var characterObject = {
 
 	setPower: function (player) {
 		/*array to store baseattackpower and counterattackpower*/
+
 		var attackPower = [];
 
 		if (player === "c1") {
@@ -65,10 +72,10 @@ var characterObject = {
 and also to choose defender from the enemies*/
 
 $('#divCharacter').on('click', 'a', function () {
-
-	$("#hasEnemies").css({
-		"display": "block"
-	});
+	
+	banana.play();
+	
+	$("#hasEnemies").css({"display": "block"});
 	var character = $("#divCharacter").children("a");
 	$("#divCharacter").empty();
 	$("#enemies").append(character);
@@ -107,6 +114,8 @@ any of the defender defeats player the n the player losses the game. player win 
 setting everything to game start*/
 
 $("#attack").on("click", function () {
+
+	
 	var playerHealth = $("#divCharacter").children("a").children(".bottomWords").html();
 	var defenderHealth = $("#defender").children("a").children(".bottomWords").html();
 	var playerName = $("#divCharacter").children("a").children(".topWords").html();
@@ -121,14 +130,16 @@ $("#attack").on("click", function () {
 	attackPower += baseAttackPower[2];
 
 	if ($("#defender").children().length <= 0 && $("#enemies").children().length > 0) {
-		$("#attackMsg").html("Po-ka, Bi-do ");
+		$("#attackMsg").html("Po-ka, choose buddy. ");
+		what.play();
 	} else if ($("#defender").children().length > 0) {
-		attackMsg = "You attacked  " + defenderName + " for  " + attackPower + " bananas. <br>" + defenderName + " attacked you back for " + counterAttackPower[3] + " bananas.";
+		attack.play();
+		attackMsg = "You attacked  " + defenderName + " for  " + attackPower + "🍌 bananas . <br>" + defenderName + " attacked you back for " + counterAttackPower[3] + "🍌 bananas.";
 		defenderHealth -= attackPower;
 
 		if (defenderHealth <= 0) {
 			if ($("#enemies").children().length > 0) {
-				attackMsg = "You have eaten all bananas from " + defenderName + ". Choose another buddy.";
+				attackMsg = "You have eaten all bananas 🍌 from " + defenderName + ". Choose another buddy.";
 				$("#hasDefender").css({
 					"display": "none"
 				});
@@ -140,7 +151,8 @@ $("#attack").on("click", function () {
 				$("#hasEnemies").css({
 					"display": "none"
 				});
-				attackMsg = "Tulaliloo ti amo Banana King " + playerName + "..... You Won !!";
+				attackMsg = "Tulaliloo ti amo Banana King 🍌" + playerName + "..... You Won !!";
+				defenderOut.play();
 				$("#attack").prop("disabled", true);
 				$("#defender").children("a").remove();
 				restart();
@@ -149,7 +161,8 @@ $("#attack").on("click", function () {
 		} else {
 			playerHealth -= counterAttackPower[3];
 			if (playerHealth <= 0) {
-				attackMsg = "You lost all your bananas, Poopaye ! ";
+				out.play();
+				attackMsg = "You lost all your bananas 🍌, Poopaye ! ";
 				$("#attack").prop("disabled", true);
 				restart();
 			}
