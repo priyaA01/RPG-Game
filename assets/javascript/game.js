@@ -13,25 +13,25 @@ object method setPower returns player's attackpowers*/
 var characterObject = {
 
 	"character1": {
-		"name": "Obi-Wan Kenobi",
+		"name": "Kevin",
 		"healthPoints": 120,
 		"attackPower": 8,
 		"counterAttackPower": 15
 	},
 	"character2": {
-		"name": "Luke Skywalker",
+		"name": "Bob",
 		"healthPoints": 100,
 		"attackPower": 15,
 		"counterAttackPower": 5
 	},
 	"character3": {
-		"name": "Darth Sidious",
+		"name": "Dave",
 		"healthPoints": 150,
 		"attackPower": 6,
 		"counterAttackPower": 20
 	},
 	"character4": {
-		"name": "Darth Maul",
+		"name": "Stuart",
 		"healthPoints": 180,
 		"attackPower": 3,
 		"counterAttackPower": 25
@@ -187,13 +187,13 @@ function restart() {
 		$("#defender").empty();
 		$("#attackMsg").html("");
 		attackPower = 0;
-		$("#divCharacter").append('<a href="#" class ="character" id="c1"> <img src="assets/images/character1.jpg" alt="character1" > <span class="topWords">Kevin</span> <span class="bottomWords">120</span></a>');
+		$("#divCharacter").append('<a href="#" class ="character" id="c1"> <img src="assets/images/character1.jpg" alt="character1" > <span class="topWords">'+characterObject.character1.name+'</span> <span class="bottomWords">'+characterObject.character1.healthPoints+'</span></a>');
 
-		$("#divCharacter").append('<a href="#" class ="character" id="c2"><img src="assets/images/character2.jpg" alt="character2" > <span class="topWords">Bob</span><span class="bottomWords">100</span></a>');
+		$("#divCharacter").append('<a href="#" class ="character" id="c2"><img src="assets/images/character2.jpg" alt="character2" > <span class="topWords">'+characterObject.character2.name+'</span><span class="bottomWords">'+characterObject.character2.healthPoints+'</span></a>');
 
-		$("#divCharacter").append('<a href="#" class ="character" id="c3"><img src="assets/images/character3.jpg" alt="character3" > <span class="topWords">Dave</span><span class="bottomWords">150</span></a>');
+		$("#divCharacter").append('<a href="#" class ="character" id="c3"><img src="assets/images/character3.jpg" alt="character3" > <span class="topWords">'+characterObject.character3.name+'</span><span class="bottomWords">'+characterObject.character3.healthPoints+'</span></a>');
 
-		$("#divCharacter").append('<a href="#" class ="character" id="c4"><img src="assets/images/character4.jpg" alt="character4" > <span class="topWords">Stuart</span><span class="bottomWords">180</span></a>');
+		$("#divCharacter").append('<a href="#" class ="character" id="c4"><img src="assets/images/character4.jpg" alt="character4" > <span class="topWords">'+characterObject.character4.name+'</span><span class="bottomWords">'+characterObject.character4.healthPoints+'</span></a>');
 
 		$("#divCharacter").children("a").children("img").css({
 			"border": "3px solid red"
