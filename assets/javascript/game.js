@@ -3,7 +3,6 @@ var attackPower = 0;
 var attackMsg = "";
 var banana = new Audio("assets/images/banana.mp3");
 var attack = new Audio("assets/images/attack.mp3");
-var what = new Audio("assets/images/what.mp3");
 var defenderOut = new Audio("assets/images/defenderOut.mp3");
 var out = new Audio("assets/images/out.mp3");
 
@@ -131,7 +130,6 @@ $("#attack").on("click", function () {
 
 	if ($("#defender").children().length <= 0 && $("#enemies").children().length > 0) {
 		$("#attackMsg").html("Po-ka, choose buddy. ");
-		what.play();
 	} else if ($("#defender").children().length > 0) {
 		attack.play();
 		attackMsg = "You attacked  " + defenderName + " for  " + attackPower + "🍌 bananas . <br>" + defenderName + " attacked you back for " + counterAttackPower[3] + "🍌 bananas.";
