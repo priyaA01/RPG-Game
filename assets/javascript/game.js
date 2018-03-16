@@ -194,7 +194,7 @@ function restart() {
 		$("#divCharacter").append('<a href="#" class ="character" id="c4"><img src="assets/images/character4.jpg" alt="character4" > <span class="topWords">'+characterObject.character4.name+'</span><span class="bottomWords">'+characterObject.character4.healthPoints+'</span></a>');
 
 		$("#divCharacter").children("a").children("img").css({
-			"border": "3px solid red"
+			"border": "3px solid #ffe135"
 		});
 		$("#hasEnemies").css({
 			"display": "none"
