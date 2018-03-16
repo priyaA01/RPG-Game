@@ -176,7 +176,7 @@ $("#attack").on("click", function () {
 /*function to create restart button to restart the game*/
 function restart() {
 	$("#restart").css({
-		"display": "block"
+		"display": "inline"
 	});
 
 	$("#restart").on("click", function () {
